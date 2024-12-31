@@ -38,8 +38,7 @@ public class Main {
         System.out.println();
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (char i = 10; i > 0; i--) { // почему-то, когда ставлю (char i = 11; i > 0; i--), то выходить ошибка, Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 11 out of bounds for length 11
-            // at Main.main(Main.java:42)     Но ведь в массиве 11 ячеек. А когда i = 10 , то не выводит [0] ячейку?
+        for (char i = 10; i < reverseFullName.length; i--) { // получилось!!! Ура!!! Но, появился вопрос. Почему знак "<" не нужно менять на ">" ? Ведь я иду циклом от большего индекса массива к большему. Логично же, что нужно заменить знак или нет?
             System.out.print(reverseFullName[i]);
         }
     }
