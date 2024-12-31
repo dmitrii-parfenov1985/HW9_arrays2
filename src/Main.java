@@ -16,9 +16,8 @@ public class Main {
                 maxSalary = salary[i];
             }
         }
-        System.out.println("Максимальная сумма трат за неделю составила " + maxSalary + " рублей" );
-        // знаю, что следующее решение не верное, но я не понимаю как изменить код, чтобы найти минимальное значение
-        int minSalary = 1;
+        System.out.println("Максимальная сумма трат за неделю составила " + maxSalary + " рублей");
+        int minSalary = 1000000;
         for (int i = 0; i < salary.length; i++) {
             if (salary[i] < minSalary) {
                 minSalary = salary[i];
@@ -29,18 +28,19 @@ public class Main {
         System.out.println();
         System.out.println("Задача 3");
 
-        int [] salary_3 = {1231, 8726, 9087, 2454, 9834};
-        int sum_3 = 0;
-        for (int i = 0; i < salary_3.length; i++) {
-           sum_3 = sum_3 + salary_3[i]; // возможно так: double averageSalary = sum_3 / 5;  и потом sout (averageSalary)
-        }// тут я понимаю, что нужно завести новую переменную типа double и вычислить среднее значение, но не понимаю куда вставить этот код
-        System.out.println(sum_3);
+        int[] salary3 = {1231, 8726, 9087, 2454, 9834};
+        int sum3 = 0;
+        for (int i = 0; i < salary3.length; i++) {
+            sum3 = (sum3 + salary3[i]) / salary3.length;
+        }
+        System.out.println(sum3);
 
         System.out.println();
         System.out.println("Задача 4");
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 0; i < reverseFullName.length; i++) {
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (char i = 10; i > 0; i--) { // почему-то, когда ставлю (char i = 11; i > 0; i--), то выходить ошибка, Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 11 out of bounds for length 11
+            // at Main.main(Main.java:42)     Но ведь в массиве 11 ячеек. А когда i = 10 , то не выводит [0] ячейку?
+            System.out.print(reverseFullName[i]);
         }
-        System.out.print(reverseFullName);// я здаюсь... не нашёл в уроках как сделать реверс индексов массива
     }
 }
