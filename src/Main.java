@@ -17,7 +17,7 @@ public class Main {
             }
         }
         System.out.println("Максимальная сумма трат за неделю составила " + maxSalary + " рублей");
-        int minSalary = 1000000;
+        int minSalary = 90000;
         for (int i = 0; i < salary.length; i++) {
             if (salary[i] < minSalary) {
                 minSalary = salary[i];
@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (char i = 10; i < reverseFullName.length; i--) { // получилось!!! Ура!!! Но, появился вопрос. Почему знак "<" не нужно менять на ">" ? Ведь я иду циклом от большего индекса массива к большему. Логично же, что нужно заменить знак или нет?
+        for (int i = reverseFullName.length -1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
         }
     }
